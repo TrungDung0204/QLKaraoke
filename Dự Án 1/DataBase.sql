@@ -5,6 +5,7 @@ CREATE TABLE Nhan_Vien
 (
   MaNV Varchar(15) NOT NULL,
   HoTen Varchar(30) NOT NULL,
+  GioiTinh bit,
   SĐT INT NOT NULL,
   Email Varchar(25) NOT NULL,
   CaLam Varchar(10) NOT NULL,
@@ -58,6 +59,7 @@ CREATE TABLE CTHD
 
 CREATE TABLE Hoa_Don
 (
+  Tong_SoLuong int not null,
   Ngay_Lap date NOT NULL,
   MaHD varchar(15) NOT NULL,
   MaNV varchar(15) NOT NULL,
