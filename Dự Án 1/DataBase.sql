@@ -42,28 +42,28 @@ CREATE TABLE SP
   FOREIGN KEY (MaLoai) REFERENCES Loai_sp(MaLoai)
 );
 
-CREATE TABLE CTHĐ
+CREATE TABLE CTHD
 (
   So_Luong INT NOT NULL,
   Tong_Tien float NOT NULL,
   Tong_Gio time NOT NULL,
-  CTHĐ Varchar(15) NOT NULL,
+  CTHD Varchar(15) NOT NULL,
   MaPhong varchar(15) NOT NULL,
   MaSP varchar(15) NOT NULL,
-  PRIMARY KEY (CTHĐ),
+  PRIMARY KEY (CTHD),
   FOREIGN KEY (MaPhong) REFERENCES Phong(MaPhong),
   FOREIGN KEY (MaSP) REFERENCES SP(MaSP)
 );
 
-CREATE TABLE Hoa_Đon
+CREATE TABLE Hoa_Don
 (
   Ngay_Lap date NOT NULL,
-  MaHĐ varchar(15) NOT NULL,
+  MaHD varchar(15) NOT NULL,
   MaNV varchar(15) NOT NULL,
-  CTHĐ varchar(15) NOT NULL,
-  PRIMARY KEY (MaHĐ),
+  CTHD varchar(15) NOT NULL,
+  PRIMARY KEY (MaHD),
   FOREIGN KEY (MaNV) REFERENCES Nhan_Vien(MaNV),
-  FOREIGN KEY (CTHĐ) REFERENCES CTHĐ(CTHĐ)
+  FOREIGN KEY (CTHD) REFERENCES CTHD(CTHD)
 );
 
 
@@ -88,12 +88,12 @@ INSERT INTO SP (MaSP, TenSP, Gia, MaLoai) VALUES
 ('SP02', 'Trà sữa', 25000, 'L01'),
 ('SP03', 'Bánh mì', 15000, 'L02');
 
--- Thêm dữ liệu vào bảng CTHĐ
-INSERT INTO CTHĐ (So_Luong, Tong_Tien, Tong_Gio, CTHĐ, MaPhong, MaSP) VALUES
+-- Thêm dữ liệu vào bảng CTHD
+INSERT INTO CTHD (So_Luong, Tong_Tien, Tong_Gio, CTHD, MaPhong, MaSP) VALUES
 (2, 40000, '04:00', 'CT01', 'P01', 'SP01'),
 (1, 25000, '02:00', 'CT02', 'P02', 'SP02');
 
 -- Thêm dữ liệu vào bảng Hoa_Đon
-INSERT INTO Hoa_Đon (Ngay_Lap, MaHĐ, MaNV, CTHĐ) VALUES
+INSERT INTO Hoa_Don (Ngay_Lap, MaHD, MaNV, CTHD) VALUES
 ('2023-10-29', 'HD01', 'NV01', 'CT01'),
 ('2023-10-30', 'HD02', 'NV02', 'CT02');
