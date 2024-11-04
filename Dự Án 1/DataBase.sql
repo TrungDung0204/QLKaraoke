@@ -7,6 +7,7 @@ CREATE TABLE Nhan_Vien
   HoTen Varchar(30) NOT NULL,
   GioiTinh bit,
   SĐT INT NOT NULL,
+  SoCCD int not null,
   Email Varchar(25) NOT NULL,
   DiaChi varchar(50) Not NULL,
   CaLam Varchar(10) NOT NULL,
