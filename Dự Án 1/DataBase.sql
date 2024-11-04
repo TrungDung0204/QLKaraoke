@@ -11,6 +11,7 @@ CREATE TABLE Nhan_Vien
   Luong float NOT NULL,
   Password varchar(30) NOT NULL,
   Role Varchar(10) NOT NULL,
+  Image varchar(50),
   PRIMARY KEY (MaNV)
 );
 
@@ -68,9 +69,9 @@ CREATE TABLE Hoa_Đon
 
 
 -- Thêm dữ liệu vào bảng Nhan_Vien
-INSERT INTO Nhan_Vien (MaNV, HoTen, SĐT, Email, CaLam, Luong, Password, Role) VALUES
-('NV01', 'Nguyen Van A', 912345678, 'nva@gmail.com', 'Ca1', 5000000, 'password123', 'Admin'),
-('NV02', 'Tran Thi B', 923456789, 'ttb@gmail.com', 'Ca2', 4500000, 'password456', 'Staff');
+INSERT INTO Nhan_Vien (MaNV, HoTen, SĐT, Email, CaLam, Luong, Password, Role,Image) VALUES
+('NV01', 'Nguyen Van A', 912345678, 'nva@gmail.com', 'Ca1', 5000000, 'password123', 'Admin',''),
+('NV02', 'Tran Thi B', 923456789, 'ttb@gmail.com', 'Ca2', 4500000, 'password456', 'Staff','');
 
 -- Thêm dữ liệu vào bảng Phong
 INSERT INTO Phong (MaPhong, Gio_Bat_Dau, Gio_Ket_Thuc, Trang_Thai, MaNV) VALUES
