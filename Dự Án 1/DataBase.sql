@@ -37,6 +37,7 @@ CREATE TABLE SP
   MaSP varchar(15) NOT NULL,
   TenSP varchar(30) NOT NULL,
   Gia float NOT NULL,
+  SoLuong int Not null,
   MaLoai varchar(15) NOT NULL,
   PRIMARY KEY (MaSP),
   FOREIGN KEY (MaLoai) REFERENCES Loai_sp(MaLoai)
