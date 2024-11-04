@@ -8,6 +8,7 @@ CREATE TABLE Nhan_Vien
   GioiTinh bit,
   SĐT INT NOT NULL,
   Email Varchar(25) NOT NULL,
+  DiaChi varchar(50) Not NULL,
   CaLam Varchar(10) NOT NULL,
   Luong float NOT NULL,
   Password varchar(30) NOT NULL,
