@@ -1,4 +1,4 @@
-﻿Create database QLKaraoke;
+Create database QLKaraoke;
 use QLKaraoke;
 
 CREATE TABLE Nhan_Vien
@@ -6,10 +6,10 @@ CREATE TABLE Nhan_Vien
   MaNV Varchar(15) NOT NULL,
   HoTen Varchar(30) NOT NULL,
   GioiTinh bit,
-  SĐT INT NOT NULL,
-  SoCCD int not null,
+  SĐT varchar(11) NOT NULL,
+  SoCCD varchar(12) not null,
   Email Varchar(25) NOT NULL,
-  DiaChi varchar(50) Not NULL,
+  DiaChi varchar(100) Not NULL,
   CaLam Varchar(10) NOT NULL,
   Luong float NOT NULL,
   Password varchar(30) NOT NULL,
@@ -73,9 +73,9 @@ CREATE TABLE Hoa_Don
 
 
 -- Thêm dữ liệu vào bảng Nhan_Vien
-INSERT INTO Nhan_Vien (MaNV, HoTen, SĐT, Email, CaLam, Luong, Password, Role) VALUES
-('NV01', 'Nguyen Van A', 912345678, 'nva@gmail.com', 'Ca1', 5000000, 'password123', 'Admin'),
-('NV02', 'Tran Thi B', 923456789, 'ttb@gmail.com', 'Ca2', 4500000, 'password456', 'Staff');
+INSERT INTO Nhan_Vien (MaNV, HoTen, GioiTinh, SĐT, SoCCD, Email,DiaChi, CaLam, Luong, Password, Role) VALUES
+('NV01', 'Nguyen Van A',0, '0912345678', '088289006859', 'nva@gmail.com',N'1356 Tỉnh Lộ 10,Phường Tân Tạo, Quận Bình Tân,TP HCM', 'Ca1', 5000000, 'password123', 'Admin'),
+('NV02', 'Tran Thi B',1, '0923456789', '046101168495', 'ttb@gmail.com',N'46 Nguyễn Trãi,Quận 1,Tp HCM', 'Ca2', 4500000, 'password456', 'Staff');
 
 -- Thêm dữ liệu vào bảng Phong
 INSERT INTO Phong (MaPhong, Gio_Bat_Dau, Gio_Ket_Thuc, Trang_Thai, MaNV) VALUES
@@ -88,10 +88,10 @@ INSERT INTO Loai_sp (MaLoai, TenLoai) VALUES
 ('L02', 'Đồ ăn nhanh');
 
 -- Thêm dữ liệu vào bảng SP
-INSERT INTO SP (MaSP, TenSP, Gia, MaLoai) VALUES
-('SP01', 'Cà phê', 20000, 'L01'),
-('SP02', 'Trà sữa', 25000, 'L01'),
-('SP03', 'Bánh mì', 15000, 'L02');
+INSERT INTO SP (MaSP, TenSP, Gia,SoLuong, MaLoai) VALUES
+('SP01', 'Cà phê', 20000,30, 'L01'),
+('SP02', 'Trà sữa', 25000,20, 'L01'),
+('SP03', 'Bánh mì', 15000,15, 'L02');
 
 -- Thêm dữ liệu vào bảng CTHD
 INSERT INTO CTHD (So_Luong, Tong_Tien, Tong_Gio, CTHD, MaPhong, MaSP) VALUES
@@ -99,6 +99,6 @@ INSERT INTO CTHD (So_Luong, Tong_Tien, Tong_Gio, CTHD, MaPhong, MaSP) VALUES
 (1, 25000, '02:00', 'CT02', 'P02', 'SP02');
 
 -- Thêm dữ liệu vào bảng Hoa_Đon
-INSERT INTO Hoa_Don (Ngay_Lap, MaHD, MaNV, CTHD) VALUES
-('2023-10-29', 'HD01', 'NV01', 'CT01'),
-('2023-10-30', 'HD02', 'NV02', 'CT02');
+INSERT INTO Hoa_Don (Tong_SoLuong,Ngay_Lap, MaHD, MaNV, CTHD) VALUES
+(10,'2023-10-29', 'HD01', 'NV01', 'CT01'),
+(7,'2023-10-30', 'HD02', 'NV02', 'CT02'
