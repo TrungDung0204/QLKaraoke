@@ -7,7 +7,7 @@ CREATE TABLE Nhan_Vien
   HoTen Varchar(30) NOT NULL,
   GioiTinh bit,
   SĐT varchar(11) NOT NULL,
-  SoCCD varchar(12) not null,
+  CCCD varchar(12) not null,
   Email Varchar(25) NOT NULL,
   DiaChi varchar(100) Not NULL,
   CaLam Varchar(10) NOT NULL,
@@ -73,7 +73,7 @@ CREATE TABLE Hoa_Don
 
 
 -- Thêm dữ liệu vào bảng Nhan_Vien
-INSERT INTO Nhan_Vien (MaNV, HoTen, GioiTinh, SĐT, SoCCD, Email,DiaChi, CaLam, Luong, Password, Role) VALUES
+INSERT INTO Nhan_Vien (MaNV, HoTen, GioiTinh, SĐT, CCCD, Email,DiaChi, CaLam, Luong, Password, Role) VALUES
 ('NV01', 'Nguyen Van A',0, '0912345678', '088289006859', 'nva@gmail.com',N'1356 Tỉnh Lộ 10,Phường Tân Tạo, Quận Bình Tân,TP HCM', 'Ca1', 5000000, 'password123', 'Admin'),
 ('NV02', 'Tran Thi B',1, '0923456789', '046101168495', 'ttb@gmail.com',N'46 Nguyễn Trãi,Quận 1,Tp HCM', 'Ca2', 4500000, 'password456', 'Staff');
 
