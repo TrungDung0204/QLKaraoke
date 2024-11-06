@@ -51,7 +51,7 @@ CREATE TABLE CTHD
   So_Luong INT NOT NULL,
   Tong_Tien float NOT NULL,
   Tong_Gio time NOT NULL,
-  CTHD Varchar(15) NOT NULL,
+  MaCTHD Varchar(15) NOT NULL,
   MaPhong varchar(15) NOT NULL,
   MaSP varchar(15) NOT NULL,
   PRIMARY KEY (CTHD),
@@ -94,11 +94,11 @@ INSERT INTO SP (MaSP, TenSP, Gia,SoLuong, MaLoai) VALUES
 ('SP03', 'Bánh mì', 15000,15, 'L02');
 
 -- Thêm dữ liệu vào bảng CTHD
-INSERT INTO CTHD (So_Luong, Tong_Tien, Tong_Gio, CTHD, MaPhong, MaSP) VALUES
+INSERT INTO CTHD (So_Luong, Tong_Tien, Tong_Gio, MaCTHD, MaPhong, MaSP) VALUES
 (2, 40000, '04:00', 'CT01', 'P01', 'SP01'),
 (1, 25000, '02:00', 'CT02', 'P02', 'SP02');
 
 -- Thêm dữ liệu vào bảng Hoa_Đon
-INSERT INTO Hoa_Don (Tong_SoLuong,Ngay_Lap, MaHD, MaNV, CTHD) VALUES
+INSERT INTO Hoa_Don (Tong_SoLuong,Ngay_Lap, MaHD, MaNV, MaCTHD) VALUES
 (10,'2023-10-29', 'HD01', 'NV01', 'CT01'),
 (7,'2023-10-30', 'HD02', 'NV02', 'CT02'
